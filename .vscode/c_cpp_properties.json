@@ -10,9 +10,11 @@
         },
         {
             "name": "Linux",
-            "includePath": ["/usr/include",
-            "/usr/local/include",
+            "includePath": [
+            "/usr/include",
             "/opt/ros/kinetic/include",
+            "/usr/local/include",
+            
             "/opt/ros/${ROS_DISTRO}/include"
             
             ],

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Workspace>
+    <Distribution name="kinetic"/>
+    <DefaultBuildSystem value="0"/>
+    <WatchDirectories>
+        <Directory>src</Directory>
+    </WatchDirectories>
+    <IncludePaths>
+        <Directory>/home/jack/ros/view_ws/src/iai_kinect2/kinect2_registration/include</Directory>
+        <Directory>/home/jack/ros/view_ws/src/iai_kinect2/kinect2_registration/include/internal</Directory>
+        <Directory>/home/jack/ros/view_ws/src/iai_kinect2/kinect2_bridge/include</Directory>
+        <Directory>/home/jack/ros/view_ws/src/iai_kinect2/kinect2_calibration/include</Directory>
+        <Directory>/home/jack/ros/view_ws/src/iai_kinect2/kinect2_viewer/include</Directory>
+        <Directory>/home/jack/ros/view_ws/src/pcl_recognition/include </Directory>
+
+        <Directory>/usr/src/gtest</Directory>
+        <Directory>/usr/src/gtest/include</Directory>
+        <Directory>/opt/ros/indigo/include</Directory>
+        <Directory>/usr/include/eigen3</Directory>
+        <Directory>/usr/include/opencv</Directory>
+        <Directory>/usr/local/include</Directory>
+        <Directory>/usr/include/ni</Directory>
+        <Directory>/usr/include/openni2</Directory>
+        <Directory>/usr/include/vtk-5.8</Directory>
+        <Directory>/usr/local/include/pcl-1.8</Directory>
+    </IncludePaths>
+</Workspace>

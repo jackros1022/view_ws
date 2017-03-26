@@ -1,0 +1,62 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": ["/usr/include"],
+            "browse" : {
+                "limitSymbolsToIncludedHeaders" : true,
+                "databaseFilename" : ""
+            }
+        },
+        {
+            "name": "Linux",
+            "includePath": 
+            [   
+                "/usr/include",
+                "/home/jack/ros/sts_ws/src/iai_kinect2/kinect2_registration/include",
+                "/home/jack/ros/sts_ws/src/iai_kinect2/kinect2_registration/include/internal",
+                "/home/jack/ros/sts_ws/src/iai_kinect2/kinect2_bridge/include",
+                "/home/jack/ros/sts_ws/src/iai_kinect2/kinect2_calibration/include",
+                "/home/jack/ros/sts_ws/src/iai_kinect2/kinect2_viewer/include",
+                "/home/jack/ros/sts_ws/src/chapter6_tutorials/include",
+                "/home/jack/ros/sts_ws/src/universal_robot/ur_kinematics/include",
+                "/home/jack/ros/sts_ws/build/fermi/moveit_cartesian_plan_plugin",
+                "/home/jack/ros/sts_ws/src/fermi/moveit_cartesian_plan_plugin/include",
+                "/home/jack/ros/sts_ws/devel/include",
+                "/home/jack/ros/sts_ws/src/seven_dof_robot/moveit_simple_grasps/include",
+                "/home/jack/ros/sts_ws/build/fermi/moveit_cartesian_plan_plugin/CMakeFiles/moveit_cartesian_plan_plugin.dir/include",
+                "/home/jack/ros/sts_ws/build/fermi/moveit_cartesian_plan_plugin/include",
+                "/home/jack/ros/sts_ws/src/universal_robot/ur5_nav/include",
+                "/home/jack/ros/sts_ws/src/col_seven_robot_description/include",
+                "/home/jack/ros/sts_ws/src/col_seven_robot_nav/include",
+                "/usr/src/gtest",
+                "/usr/src/gtest/include",
+                "/opt/ros/indigo/include",
+                "/usr/include/eigen3",
+                "/usr/include/opencv",
+                "/usr/local/include",
+                "/usr/include/ni",
+                "/usr/include/openni2",
+                "/usr/include/vtk-5.8",
+                "/usr/local/include/pcl-1.8",
+                "/usr/include/pcl-1.7",
+                "/usr/include/OGRE",
+                "/usr/include/qt4",
+                "/usr/include/qt4/QtCore",
+                "/usr/include/qt4/QtGui"
+            ],
+            "browse" : {
+                "limitSymbolsToIncludedHeaders" : true,
+                "databaseFilename" : ""
+            }
+        },
+        {
+            "name": "Win32",
+            "includePath": ["c:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include"],
+            "browse" : {
+                "limitSymbolsToIncludedHeaders" : true,
+                "databaseFilename" : ""
+            }
+        }
+    ]
+}

@@ -1,0 +1,552 @@
+.
+├── build
+├── .catkin_workspace
+├── devel
+│   ├── .built_by
+│   ├── .catkin
+│   ├── env.sh
+│   ├── include
+│   │   ├── beta_navigator
+│   │   │   ├── lidar.h
+│   │   │   ├── navigatorActionFeedback.h
+│   │   │   ├── navigatorActionGoal.h
+│   │   │   ├── navigatorAction.h
+│   │   │   ├── navigatorActionResult.h
+│   │   │   ├── navigatorFeedback.h
+│   │   │   ├── navigatorGoal.h
+│   │   │   ├── navigatorResult.h
+│   │   │   ├── path.h
+│   │   │   ├── pathRequest.h
+│   │   │   └── pathResponse.h
+│   │   ├── coke_finder
+│   │   │   ├── objectFinderActionFeedback.h
+│   │   │   ├── objectFinderActionGoal.h
+│   │   │   ├── objectFinderAction.h
+│   │   │   ├── objectFinderActionResult.h
+│   │   │   ├── objectFinderFeedback.h
+│   │   │   ├── objectFinderGoal.h
+│   │   │   └── objectFinderResult.h
+│   │   └── coke_grabber
+│   │       ├── coke_grabberActionFeedback.h
+│   │       ├── coke_grabberActionGoal.h
+│   │       ├── coke_grabberAction.h
+│   │       ├── coke_grabberActionResult.h
+│   │       ├── coke_grabberFeedback.h
+│   │       ├── coke_grabberGoal.h
+│   │       └── coke_grabberResult.h
+│   ├── lib
+│   ├── .rosinstall
+│   ├── setup.bash
+│   ├── setup.sh
+│   ├── _setup_util.py
+│   ├── setup.zsh
+│   └── share
+│       ├── beta_navigator
+│       │   ├── cmake
+│       │   │   ├── beta_navigatorConfig.cmake
+│       │   │   ├── beta_navigatorConfig-version.cmake
+│       │   │   ├── beta_navigator-msg-extras.cmake
+│       │   │   └── beta_navigator-msg-paths.cmake
+│       │   └── msg
+│       │       ├── navigatorActionFeedback.msg
+│       │       ├── navigatorActionGoal.msg
+│       │       ├── navigatorAction.msg
+│       │       ├── navigatorActionResult.msg
+│       │       ├── navigatorFeedback.msg
+│       │       ├── navigatorGoal.msg
+│       │       └── navigatorResult.msg
+│       ├── catkin_simple
+│       │   └── cmake
+│       │       ├── catkin_simpleConfig.cmake
+│       │       ├── catkin_simpleConfig-version.cmake
+│       │       └── catkin_simple-extras.cmake
+│       ├── chapter6_tutorials
+│       │   └── cmake
+│       │       ├── chapter6_tutorialsConfig.cmake
+│       │       └── chapter6_tutorialsConfig-version.cmake
+│       ├── coke_fetcher
+│       │   └── cmake
+│       │       ├── coke_fetcherConfig.cmake
+│       │       └── coke_fetcherConfig-version.cmake
+│       ├── coke_finder
+│       │   ├── cmake
+│       │   │   ├── coke_finderConfig.cmake
+│       │   │   ├── coke_finderConfig-version.cmake
+│       │   │   ├── coke_finder-msg-extras.cmake
+│       │   │   └── coke_finder-msg-paths.cmake
+│       │   └── msg
+│       │       ├── objectFinderActionFeedback.msg
+│       │       ├── objectFinderActionGoal.msg
+│       │       ├── objectFinderAction.msg
+│       │       ├── objectFinderActionResult.msg
+│       │       ├── objectFinderFeedback.msg
+│       │       ├── objectFinderGoal.msg
+│       │       └── objectFinderResult.msg
+│       ├── coke_grabber
+│       │   ├── cmake
+│       │   │   ├── coke_grabberConfig.cmake
+│       │   │   ├── coke_grabberConfig-version.cmake
+│       │   │   ├── coke_grabber-msg-extras.cmake
+│       │   │   └── coke_grabber-msg-paths.cmake
+│       │   └── msg
+│       │       ├── coke_grabberActionFeedback.msg
+│       │       ├── coke_grabberActionGoal.msg
+│       │       ├── coke_grabberAction.msg
+│       │       ├── coke_grabberActionResult.msg
+│       │       ├── coke_grabberFeedback.msg
+│       │       ├── coke_grabberGoal.msg
+│       │       └── coke_grabberResult.msg
+│       ├── common-lisp
+│       │   └── ros
+│       │       ├── beta_navigator
+│       │       │   ├── msg
+│       │       │   │   ├── beta_navigator-msg.asd
+│       │       │   │   ├── lidar.lisp
+│       │       │   │   ├── navigatorActionFeedback.lisp
+│       │       │   │   ├── navigatorActionGoal.lisp
+│       │       │   │   ├── navigatorAction.lisp
+│       │       │   │   ├── navigatorActionResult.lisp
+│       │       │   │   ├── navigatorFeedback.lisp
+│       │       │   │   ├── navigatorGoal.lisp
+│       │       │   │   ├── navigatorResult.lisp
+│       │       │   │   ├── _package_lidar.lisp
+│       │       │   │   ├── _package.lisp
+│       │       │   │   ├── _package_navigatorActionFeedback.lisp
+│       │       │   │   ├── _package_navigatorActionGoal.lisp
+│       │       │   │   ├── _package_navigatorAction.lisp
+│       │       │   │   ├── _package_navigatorActionResult.lisp
+│       │       │   │   ├── _package_navigatorFeedback.lisp
+│       │       │   │   ├── _package_navigatorGoal.lisp
+│       │       │   │   └── _package_navigatorResult.lisp
+│       │       │   └── srv
+│       │       │       ├── beta_navigator-srv.asd
+│       │       │       ├── _package.lisp
+│       │       │       ├── _package_path.lisp
+│       │       │       └── path.lisp
+│       │       ├── coke_finder
+│       │       │   └── msg
+│       │       │       ├── coke_finder-msg.asd
+│       │       │       ├── objectFinderActionFeedback.lisp
+│       │       │       ├── objectFinderActionGoal.lisp
+│       │       │       ├── objectFinderAction.lisp
+│       │       │       ├── objectFinderActionResult.lisp
+│       │       │       ├── objectFinderFeedback.lisp
+│       │       │       ├── objectFinderGoal.lisp
+│       │       │       ├── objectFinderResult.lisp
+│       │       │       ├── _package.lisp
+│       │       │       ├── _package_objectFinderActionFeedback.lisp
+│       │       │       ├── _package_objectFinderActionGoal.lisp
+│       │       │       ├── _package_objectFinderAction.lisp
+│       │       │       ├── _package_objectFinderActionResult.lisp
+│       │       │       ├── _package_objectFinderFeedback.lisp
+│       │       │       ├── _package_objectFinderGoal.lisp
+│       │       │       └── _package_objectFinderResult.lisp
+│       │       └── coke_grabber
+│       │           └── msg
+│       │               ├── coke_grabberActionFeedback.lisp
+│       │               ├── coke_grabberActionGoal.lisp
+│       │               ├── coke_grabberAction.lisp
+│       │               ├── coke_grabberActionResult.lisp
+│       │               ├── coke_grabberFeedback.lisp
+│       │               ├── coke_grabberGoal.lisp
+│       │               ├── coke_grabber-msg.asd
+│       │               ├── coke_grabberResult.lisp
+│       │               ├── _package_coke_grabberActionFeedback.lisp
+│       │               ├── _package_coke_grabberActionGoal.lisp
+│       │               ├── _package_coke_grabberAction.lisp
+│       │               ├── _package_coke_grabberActionResult.lisp
+│       │               ├── _package_coke_grabberFeedback.lisp
+│       │               ├── _package_coke_grabberGoal.lisp
+│       │               ├── _package_coke_grabberResult.lisp
+│       │               └── _package.lisp
+│       ├── gennodejs
+│       │   └── ros
+│       │       ├── beta_navigator
+│       │       │   ├── base_deserialize.js
+│       │       │   ├── base_serialize.js
+│       │       │   ├── find.js
+│       │       │   ├── _index.js
+│       │       │   ├── msg
+│       │       │   │   ├── _index.js
+│       │       │   │   ├── lidar.js
+│       │       │   │   ├── navigatorActionFeedback.js
+│       │       │   │   ├── navigatorActionGoal.js
+│       │       │   │   ├── navigatorAction.js
+│       │       │   │   ├── navigatorActionResult.js
+│       │       │   │   ├── navigatorFeedback.js
+│       │       │   │   ├── navigatorGoal.js
+│       │       │   │   └── navigatorResult.js
+│       │       │   └── srv
+│       │       │       ├── _index.js
+│       │       │       └── path.js
+│       │       ├── coke_finder
+│       │       │   ├── base_deserialize.js
+│       │       │   ├── base_serialize.js
+│       │       │   ├── find.js
+│       │       │   ├── _index.js
+│       │       │   └── msg
+│       │       │       ├── _index.js
+│       │       │       ├── objectFinderActionFeedback.js
+│       │       │       ├── objectFinderActionGoal.js
+│       │       │       ├── objectFinderAction.js
+│       │       │       ├── objectFinderActionResult.js
+│       │       │       ├── objectFinderFeedback.js
+│       │       │       ├── objectFinderGoal.js
+│       │       │       └── objectFinderResult.js
+│       │       └── coke_grabber
+│       │           ├── base_deserialize.js
+│       │           ├── base_serialize.js
+│       │           ├── find.js
+│       │           ├── _index.js
+│       │           └── msg
+│       │               ├── coke_grabberActionFeedback.js
+│       │               ├── coke_grabberActionGoal.js
+│       │               ├── coke_grabberAction.js
+│       │               ├── coke_grabberActionResult.js
+│       │               ├── coke_grabberFeedback.js
+│       │               ├── coke_grabberGoal.js
+│       │               ├── coke_grabberResult.js
+│       │               └── _index.js
+│       ├── kinect
+│       │   └── cmake
+│       │       ├── kinectConfig.cmake
+│       │       └── kinectConfig-version.cmake
+│       ├── kinect2_bridge
+│       │   └── cmake
+│       │       ├── kinect2_bridgeConfig.cmake
+│       │       └── kinect2_bridgeConfig-version.cmake
+│       ├── kinect2_calibration
+│       │   └── cmake
+│       │       ├── kinect2_calibrationConfig.cmake
+│       │       └── kinect2_calibrationConfig-version.cmake
+│       ├── kinect2_registration
+│       │   └── cmake
+│       │       ├── kinect2_registration.cmake
+│       │       ├── kinect2_registrationConfig.cmake
+│       │       └── kinect2_registrationConfig-version.cmake
+│       ├── kinect2_viewer
+│       │   └── cmake
+│       │       ├── kinect2_viewerConfig.cmake
+│       │       └── kinect2_viewerConfig-version.cmake
+│       ├── pcl_object_track
+│       │   └── cmake
+│       │       ├── pcl_object_trackConfig.cmake
+│       │       └── pcl_object_trackConfig-version.cmake
+│       ├── pcl_recognition
+│       │   └── cmake
+│       │       ├── pcl_recognitionConfig.cmake
+│       │       └── pcl_recognitionConfig-version.cmake
+│       ├── roseus
+│       │   └── ros
+│       │       ├── beta_navigator
+│       │       │   ├── manifest.l
+│       │       │   ├── msg
+│       │       │   │   ├── lidar.l
+│       │       │   │   ├── navigatorActionFeedback.l
+│       │       │   │   ├── navigatorActionGoal.l
+│       │       │   │   ├── navigatorAction.l
+│       │       │   │   ├── navigatorActionResult.l
+│       │       │   │   ├── navigatorFeedback.l
+│       │       │   │   ├── navigatorGoal.l
+│       │       │   │   └── navigatorResult.l
+│       │       │   └── srv
+│       │       │       └── path.l
+│       │       ├── coke_finder
+│       │       │   ├── manifest.l
+│       │       │   └── msg
+│       │       │       ├── objectFinderActionFeedback.l
+│       │       │       ├── objectFinderActionGoal.l
+│       │       │       ├── objectFinderAction.l
+│       │       │       ├── objectFinderActionResult.l
+│       │       │       ├── objectFinderFeedback.l
+│       │       │       ├── objectFinderGoal.l
+│       │       │       └── objectFinderResult.l
+│       │       └── coke_grabber
+│       │           ├── manifest.l
+│       │           └── msg
+│       │               ├── coke_grabberActionFeedback.l
+│       │               ├── coke_grabberActionGoal.l
+│       │               ├── coke_grabberAction.l
+│       │               ├── coke_grabberActionResult.l
+│       │               ├── coke_grabberFeedback.l
+│       │               ├── coke_grabberGoal.l
+│       │               └── coke_grabberResult.l
+│       ├── tabletop_operation
+│       │   └── cmake
+│       │       ├── tabletop_operationConfig.cmake
+│       │       └── tabletop_operationConfig-version.cmake
+│       └── vfh_cluster_classifier
+│           └── cmake
+│               ├── vfh_cluster_classifierConfig.cmake
+│               └── vfh_cluster_classifierConfig-version.cmake
+├── devel_isolated
+├── src
+│   ├── catkin_simple
+│   │   ├── cmake
+│   │   │   └── catkin_simple-extras.cmake.em
+│   │   ├── CMakeLists.txt
+│   │   ├── package.xml
+│   │   ├── README.md
+│   │   └── test
+│   │       └── scenarios
+│   │           └── hello_world
+│   │               ├── bar
+│   │               │   ├── CMakeLists.txt
+│   │               │   ├── include
+│   │               │   │   └── bar
+│   │               │   │       └── hello.h
+│   │               │   ├── msg
+│   │               │   │   └── HeaderString.msg
+│   │               │   ├── package.xml
+│   │               │   └── src
+│   │               │       └── hello.cpp
+│   │               ├── baz
+│   │               │   ├── CMakeLists.txt
+│   │               │   ├── include
+│   │               │   │   └── baz
+│   │               │   │       └── world.h
+│   │               │   └── package.xml
+│   │               └── foo
+│   │                   ├── CMakeLists.txt
+│   │                   ├── package.xml
+│   │                   └── src
+│   │                       └── main.cpp
+│   ├── chapter6_tutorials
+│   │   ├── CMakeLists.txt
+│   │   ├── data
+│   │   │   ├── test_pcd.pcd
+│   │   │   └── write_pcd_test.pcd
+│   │   ├── package.xml
+│   │   ├── src
+│   │   │   ├── pcl_create.cpp
+│   │   │   ├── pcl_downsampling.cpp
+│   │   │   ├── pcl_filter.cpp
+│   │   │   ├── pcl_matching.cpp
+│   │   │   ├── pcl_model_estimation.cpp
+│   │   │   ├── pcl_partitioning.cpp
+│   │   │   ├── pcl_planar_segmentation.cpp
+│   │   │   ├── pcl_read.cpp
+│   │   │   ├── pcl_visualize2.cpp
+│   │   │   ├── pcl_visualize.cpp
+│   │   │   ├── pcl_write.cpp
+│   │   │   ├── readme.md
+│   │   │   └── .vscode
+│   │   │       └── c_cpp_properties.json
+│   │   └── .vscode
+│   │       └── c_cpp_properties.json
+│   ├── CMakeLists.txt -> /opt/ros/kinetic/share/catkin/cmake/toplevel.cmake
+│   ├── iai_kinect2
+│   │   ├── iai_kinect2
+│   │   │   ├── CMakeLists.txt
+│   │   │   └── package.xml
+│   │   ├── kinect2_bridge
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── data
+│   │   │   │   ├── 002467263147
+│   │   │   │   │   ├── calib_color.yaml
+│   │   │   │   │   ├── calib_depth.yaml
+│   │   │   │   │   ├── calib_ir.yaml
+│   │   │   │   │   └── calib_pose.yaml
+│   │   │   │   ├── 196605135147
+│   │   │   │   │   ├── calib_color.yaml
+│   │   │   │   │   ├── calib_depth.yaml
+│   │   │   │   │   ├── calib_ir.yaml
+│   │   │   │   │   └── calib_pose.yaml
+│   │   │   │   └── 299150235147
+│   │   │   │       ├── calib_color.yaml
+│   │   │   │       ├── calib_ir.yaml
+│   │   │   │       └── calib_pose.yaml
+│   │   │   ├── include
+│   │   │   │   └── kinect2_bridge
+│   │   │   │       └── kinect2_definitions.h
+│   │   │   ├── launch
+│   │   │   │   └── kinect2_bridge.launch
+│   │   │   ├── nodelet_plugins.xml
+│   │   │   ├── package.xml
+│   │   │   ├── README.md
+│   │   │   └── src
+│   │   │       └── kinect2_bridge.cpp
+│   │   ├── kinect2_calibration
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── include
+│   │   │   │   └── kinect2_calibration
+│   │   │   │       └── kinect2_calibration_definitions.h
+│   │   │   ├── package.xml
+│   │   │   ├── patterns
+│   │   │   │   ├── chess5x7x0.03.pdf
+│   │   │   │   ├── chess5x7x0.03.svg
+│   │   │   │   ├── chess7x9x0.025.pdf
+│   │   │   │   ├── chess7x9x0.025.svg
+│   │   │   │   ├── chess9x11x0.02.pdf
+│   │   │   │   └── chess9x11x0.02.svg
+│   │   │   ├── README.md
+│   │   │   └── src
+│   │   │       └── kinect2_calibration.cpp
+│   │   ├── kinect2_registration
+│   │   │   ├── cmake
+│   │   │   │   ├── CheckOpenCLICDLoader.cmake
+│   │   │   │   ├── FindOpenCL.cmake
+│   │   │   │   └── kinect2_registration.cmake.in
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── include
+│   │   │   │   ├── internal
+│   │   │   │   │   └── CL
+│   │   │   │   │       └── cl.hpp
+│   │   │   │   └── kinect2_registration
+│   │   │   │       ├── kinect2_console.h
+│   │   │   │       └── kinect2_registration.h
+│   │   │   ├── package.xml
+│   │   │   ├── README.md
+│   │   │   └── src
+│   │   │       ├── depth_registration.cl
+│   │   │       ├── depth_registration_cpu.cpp
+│   │   │       ├── depth_registration_cpu.h
+│   │   │       ├── depth_registration_opencl.cpp
+│   │   │       ├── depth_registration_opencl.h
+│   │   │       └── kinect2_registration.cpp
+│   │   ├── kinect2_viewer
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── package.xml
+│   │   │   ├── README.md
+│   │   │   ├── source
+│   │   │   │   ├── kinect_viewer.cpp
+│   │   │   │   ├── normalEstimation.cpp
+│   │   │   │   └── ReadMe.md
+│   │   │   └── src
+│   │   │       ├── image_converter.cpp
+│   │   │       ├── image_viewer.cpp
+│   │   │       ├── pcl_cloud_viewer.cpp
+│   │   │       ├── pcl_read.cpp
+│   │   │       └── viewer.cpp
+│   │   ├── LICENSE
+│   │   ├── README.md
+│   │   └── .vscode
+│   │       └── c_cpp_properties.json
+│   ├── Object-Tracking-Kinect-ROS-OpenCV-PCL--master
+│   │   ├── CMakeLists.txt
+│   │   ├── include
+│   │   │   ├── track.h
+│   │   │   └── vars.h
+│   │   ├── package.xml
+│   │   ├── README.md
+│   │   └── src
+│   │       ├── locate.cpp
+│   │       ├── newBag.cpp
+│   │       ├── test
+│   │       │   ├── blob.cpp
+│   │       │   ├── detect.cpp
+│   │       │   ├── glview.c
+│   │       │   ├── obj_detect.cpp
+│   │       │   └── surf.cpp
+│   │       └── track.cpp
+│   ├── pcl_object_track
+│   │   ├── CMakeLists.txt
+│   │   ├── package.xml
+│   │   ├── scripts
+│   │   │   ├── listener.py
+│   │   │   ├── ros_cv_wrapper.py
+│   │   │   └── talker.py
+│   │   └── src
+│   │       ├── test_image.cpp
+│   │       ├── Tracker_object2.cpp
+│   │       └── Tracker_object.cpp
+│   ├── pcl_recognition
+│   │   ├── CMakeLists.txt
+│   │   ├── data
+│   │   │   ├── aluminum.jpg
+│   │   │   ├── bottle_blend_6k.stl
+│   │   │   ├── can_ring_pull_end_centre.png
+│   │   │   ├── coke.blend
+│   │   │   ├── coke.mtl
+│   │   │   ├── coke.obj
+│   │   │   ├── coke.obj.mtl
+│   │   │   ├── coke.stl
+│   │   │   └── coke_uv_map.jpg
+│   │   ├── .idea
+│   │   │   ├── encodings.xml
+│   │   │   ├── misc.xml
+│   │   │   ├── modules.xml
+│   │   │   ├── pcl_recognition.iml
+│   │   │   └── workspace.xml
+│   │   ├── include
+│   │   │   ├── pcl
+│   │   │   │   └── recognition
+│   │   │   │       └── 3rdparty
+│   │   │   │           └── metslib
+│   │   │   │               ├── abstract-search.hh
+│   │   │   │               ├── local-search.hh
+│   │   │   │               ├── mets.hh
+│   │   │   │               ├── metslib_config.hh
+│   │   │   │               ├── model.hh
+│   │   │   │               ├── observer.hh
+│   │   │   │               ├── simulated-annealing.hh
+│   │   │   │               ├── tabu-search.hh
+│   │   │   │               └── termination-criteria.hh
+│   │   │   └── pcl_recognition
+│   │   │       ├── object_recognizer.h
+│   │   │       └── pcl_recognition.h
+│   │   ├── ism_command.sh
+│   │   ├── launch
+│   │   │   ├── find_stool_coke.launch
+│   │   │   ├── object_recognition_kitchen.rviz
+│   │   │   ├── object_recognizer_coke1.rviz
+│   │   │   ├── object_recognizer_coke2.rviz
+│   │   │   ├── object_recognizer_test1.launch
+│   │   │   ├── object_recognizer_test2.launch
+│   │   │   ├── ORK.launch
+│   │   │   └── stool_coke.rviz
+│   │   ├── package.xml
+│   │   ├── pcd
+│   │   │   ├── coke_2.pcd
+│   │   │   ├── coke_bad.pcd
+│   │   │   ├── coke_can.pcd
+│   │   │   ├── coke.ply
+│   │   │   ├── coke_scene.pcd
+│   │   │   ├── ism_test_cat.pcd
+│   │   │   ├── ism_test_horse.pcd
+│   │   │   ├── ism_test_lioness.pcd
+│   │   │   ├── ism_test_michael.pcd
+│   │   │   ├── ism_test_wolf.pcd
+│   │   │   ├── ism_train_cat.pcd
+│   │   │   ├── ism_train_horse.pcd
+│   │   │   ├── ism_train_lioness.pcd
+│   │   │   ├── ism_train_michael.pcd
+│   │   │   ├── ism_train_wolf.pcd
+│   │   │   ├── kinect_snapshot.pcd
+│   │   │   ├── lidar.pcd
+│   │   │   ├── milk_cartoon_all_small_clorox.pcd
+│   │   │   ├── milk.pcd
+│   │   │   ├── new_coke.pcd
+│   │   │   └── trained_ism_model.txt
+│   │   ├── README.md
+│   │   ├── src
+│   │   │   ├── correspondence_grouping.cpp
+│   │   │   ├── find_plane_pcd_file.cpp
+│   │   │   ├── global_hypothesis_verification.cpp
+│   │   │   ├── ICP.cpp
+│   │   │   ├── implicit_shape_model.cpp
+│   │   │   ├── object_recognition_kitchen.cpp
+│   │   │   ├── object_recognize_main.cpp
+│   │   │   ├── object_recognizer.cpp
+│   │   │   ├── pcd_edit_tool.cpp
+│   │   │   └── pcl_utils.cpp
+│   │   ├── trained_ism_model.txt
+│   │   └── tree.txt
+│   ├── Surface_Extraction.tar
+│   └── tabletop_operation
+│       ├── CMakeLists.txt
+│       ├── package.xml
+│       ├── README.md
+│       └── src
+│           ├── cluster_euclid.cpp
+│           └── planar.cpp
+├── tree.txt
+├── view_ws.workspace
+├── view_ws.workspace.user
+└── .vscode
+    ├── c_cpp_properties.json
+    ├── launch_args.json
+    ├── launch.json
+    └── tasks.json
+
+139 directories, 410 files

@@ -1,0 +1,5 @@
+#忽略文件
+
+# build/
+devel/
+devel_isolated/

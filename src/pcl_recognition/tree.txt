@@ -1,0 +1,79 @@
+.
+├── CMakeLists.txt
+├── data
+│   ├── aluminum.jpg
+│   ├── bottle_blend_6k.stl
+│   ├── can_ring_pull_end_centre.png
+│   ├── coke.blend
+│   ├── coke.mtl
+│   ├── coke.obj
+│   ├── coke.obj.mtl
+│   ├── coke.stl
+│   └── coke_uv_map.jpg
+├── include
+│   ├── pcl
+│   │   └── recognition
+│   │       └── 3rdparty
+│   │           └── metslib
+│   │               ├── abstract-search.hh
+│   │               ├── local-search.hh
+│   │               ├── mets.hh
+│   │               ├── metslib_config.hh
+│   │               ├── model.hh
+│   │               ├── observer.hh
+│   │               ├── simulated-annealing.hh
+│   │               ├── tabu-search.hh
+│   │               └── termination-criteria.hh
+│   └── pcl_recognition
+│       ├── object_recognizer.h
+│       └── pcl_recognition.h
+├── ism_command.sh
+├── launch
+│   ├── find_stool_coke.launch
+│   ├── object_recognition_kitchen.rviz
+│   ├── object_recognizer_coke1.rviz
+│   ├── object_recognizer_coke2.rviz
+│   ├── object_recognizer_test1.launch
+│   ├── object_recognizer_test2.launch
+│   ├── ORK.launch
+│   └── stool_coke.rviz
+├── package.xml
+├── pcd
+│   ├── coke_2.pcd
+│   ├── coke_bad.pcd
+│   ├── coke_can.pcd
+│   ├── coke.ply
+│   ├── coke_scene.pcd
+│   ├── ism_test_cat.pcd
+│   ├── ism_test_horse.pcd
+│   ├── ism_test_lioness.pcd
+│   ├── ism_test_michael.pcd
+│   ├── ism_test_wolf.pcd
+│   ├── ism_train_cat.pcd
+│   ├── ism_train_horse.pcd
+│   ├── ism_train_lioness.pcd
+│   ├── ism_train_michael.pcd
+│   ├── ism_train_wolf.pcd
+│   ├── kinect_snapshot.pcd
+│   ├── lidar.pcd
+│   ├── milk_cartoon_all_small_clorox.pcd
+│   ├── milk.pcd
+│   ├── new_coke.pcd
+│   └── trained_ism_model.txt
+├── README.md
+├── readme.pdf
+├── src
+│   ├── correspondence_grouping.cpp
+│   ├── find_plane_pcd_file.cpp
+│   ├── global_hypothesis_verification.cpp
+│   ├── ICP.cpp
+│   ├── implicit_shape_model.cpp
+│   ├── object_recognition_kitchen.cpp
+│   ├── object_recognize_main.cpp
+│   ├── object_recognizer.cpp
+│   ├── pcd_edit_tool.cpp
+│   └── pcl_utils.cpp
+├── trained_ism_model.txt
+└── tree.txt
+
+10 directories, 66 files

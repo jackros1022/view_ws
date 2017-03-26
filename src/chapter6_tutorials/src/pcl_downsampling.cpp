@@ -28,7 +28,6 @@ public:
 
         pcl::toROSMsg(cloud_downsampled, output);
         pcl_pub.publish(output);
-
     }
 protected:
     ros::NodeHandle nh;

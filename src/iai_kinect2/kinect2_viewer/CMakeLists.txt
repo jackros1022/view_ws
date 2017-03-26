@@ -99,6 +99,9 @@ target_link_libraries(kinect2_viewer
     add_executable(normalEstimation source/normalEstimation.cpp)
     target_link_libraries(normalEstimation ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
+#    add_executable(kinect_view_Normal source/kinect_view_Normal.cpp)
+#    target_link_libraries(kinect_view_Normal ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+
 #############
 ## Install ##
 #############

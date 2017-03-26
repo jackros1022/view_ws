@@ -1,5 +1,3 @@
-[TOC]
-
 # kinect_viewer.cpp
 ## 2017-03-24 node不能关闭
 1. 点云显示后，直接关闭窗口node被shutdown（）关闭

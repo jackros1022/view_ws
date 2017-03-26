@@ -1,5 +1,5 @@
 #忽略文件
 
-# build/
+build/
 devel/
 devel_isolated/

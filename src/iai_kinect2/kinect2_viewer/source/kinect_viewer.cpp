@@ -1,13 +1,13 @@
 #include <ros/ros.h>
+
+//三剑客
 #include <pcl_conversions/pcl_conversions.h>
 #include <sensor_msgs/PointCloud2.h>
 #include <pcl/point_cloud.h>
-
 #include <pcl/visualization/pcl_visualizer.h>
 #include <pcl/filters/passthrough.h>
 #include <pcl/filters/statistical_outlier_removal.h>
 #include <pcl/filters/voxel_grid.h>
-
 
 class  CloudHandler
 {
@@ -60,10 +60,11 @@ public:
        voxelSampler.setLeafSize(0.01f, 0.01f, 0.01f);
        voxelSampler.filter(cloud_downsampled);
 
-       //这里不需要设置tf吗？
+     
        
        pcl::toROSMsg(cloud_downsampled, cloud_out );
-
+         //这里不需要设置tf吗？
+         // 要设置，接收/kinect2/sd/points的时候已经设置tf
 
 //       while(ros::ok())
 //      {

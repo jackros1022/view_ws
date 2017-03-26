@@ -3,7 +3,6 @@
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/point_cloud.h>
 
-
 //#include <boost/shared_ptr.hpp>
 #include <boost/thread/thread.hpp>
 #include <pcl/visualization/pcl_visualizer.h>
@@ -15,7 +14,7 @@ class NormalHandler
 public:
   NormalHandler():viewer("Normals")    //构造函数
   {
-    pcl_sub = nh.subscribe("/cloud_out_topic", 1, &NormalHandler::NormalCB, this);
+    pcl_sub = nh.subscribe("cloud_out_topic", 1, &NormalHandler::NormalCB, this);
 
     view_timer = nh.createTimer(ros::Duration(0.1), &NormalHandler::timeCB,this);
     //设置viewer默认参数
@@ -55,7 +54,8 @@ public:
   }
   void timeCB(const ros::TimerEvent&)
   {
-    viewer.spinOnce(10);
+    // viewer.spinOnce(1,true);
+    viewer.spinOnce();
     
     while (viewer.wasStopped())
     {

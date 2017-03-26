@@ -12,6 +12,7 @@
             "name": "Linux",
             "includePath": [
             "/usr/include",
+            "/opt/ros/kinetic/include/ros",
             "/opt/ros/kinetic/include",
             "/usr/local/include",
             

@@ -8,7 +8,7 @@
 #include <pcl/visualization/pcl_visualizer.h>
 #include <pcl/features/normal_3d.h>  //法线
 #include <pcl/features/integral_image_normal.h> //积分图法线
-
+//
 class NormalHandler
 {
 public:

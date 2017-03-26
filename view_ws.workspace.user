@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.2.1, 2017-03-26T21:13:52. -->
+<!-- Written by QtCreator 4.2.1, 2017-03-26T22:24:05. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -321,7 +321,7 @@
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName"></value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSLaunchStep</value>
-      <value type="bool" key="ProjectExplorer.RunStep.Enabled">true</value>
+      <value type="bool" key="ProjectExplorer.RunStep.Enabled">false</value>
       <value type="QString" key="ROSProjectManager.ROSGenericStep.Arguments"></value>
       <value type="QString" key="ROSProjectManager.ROSGenericStep.Command">roslaunch</value>
       <value type="QString" key="ROSProjectManager.ROSGenericStep.Package">kinect2_bridge</value>
@@ -331,7 +331,7 @@
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName"></value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSRunStep</value>
-      <value type="bool" key="ProjectExplorer.RunStep.Enabled">true</value>
+      <value type="bool" key="ProjectExplorer.RunStep.Enabled">false</value>
       <value type="QString" key="ROSProjectManager.ROSGenericStep.Arguments"></value>
       <value type="QString" key="ROSProjectManager.ROSGenericStep.Command">rosrun</value>
       <value type="QString" key="ROSProjectManager.ROSGenericStep.Package">kinect2_viewer</value>
@@ -347,7 +347,17 @@
       <value type="QString" key="ROSProjectManager.ROSGenericStep.Package">kinect2_viewer</value>
       <value type="QString" key="ROSProjectManager.ROSGenericStep.Target">normalEstimation</value>
      </valuemap>
-     <value type="int" key="ProjectExplorer.RunStepList.StepsCount">3</value>
+     <valuemap type="QVariantMap" key="ProjectExplorer.RunStepList.Step.3">
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName"></value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSRunStep</value>
+      <value type="bool" key="ProjectExplorer.RunStep.Enabled">true</value>
+      <value type="QString" key="ROSProjectManager.ROSGenericStep.Arguments"></value>
+      <value type="QString" key="ROSProjectManager.ROSGenericStep.Command">rosrun</value>
+      <value type="QString" key="ROSProjectManager.ROSGenericStep.Package">kinect2_viewer</value>
+      <value type="QString" key="ROSProjectManager.ROSGenericStep.Target">kinect_view_Normal</value>
+     </valuemap>
+     <value type="int" key="ProjectExplorer.RunStepList.StepsCount">4</value>
     </valuemap>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>

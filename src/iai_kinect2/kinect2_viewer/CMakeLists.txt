@@ -93,6 +93,9 @@ target_link_libraries(kinect2_viewer
 #    target_link_libraries(image_converter ${catkin_LIBRARIES}  ${OpenCV_LIBRARIES})
 
 #/*-------------2017-03-22----SOURCE----------
+    add_executable(cloud_read source/cloud_read.cpp)
+    target_link_libraries(cloud_read ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+
     add_executable(kinect_viewer source/kinect_viewer.cpp)
     target_link_libraries(kinect_viewer ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
@@ -101,6 +104,13 @@ target_link_libraries(kinect2_viewer
 
     add_executable(kinect_view_Normal source/kinect_view_Normal.cpp)
     target_link_libraries(kinect_view_Normal ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+
+    add_executable(segmentation_cloud source/segmentation_cloud.cpp)
+    target_link_libraries(segmentation_cloud ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+
+
+    add_executable(cylinder_segmentation source/cylinder_segmentation.cpp)
+    target_link_libraries(cylinder_segmentation ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
 #############
 ## Install ##

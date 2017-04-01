@@ -20,7 +20,7 @@ int main(int argc, char **argv)
   sensor_msgs::PointCloud2 output;
   pcl::PointCloud<pcl::PointXYZ> cloud;
 
-  if(pcl::io::loadPCDFile("/home/jack/ros/sts_ws/src/iai_kinect2/kinect2_viewer/data/test_pcd.pcd",cloud)==-1)
+  if(pcl::io::loadPCDFile("/home/jack/ros/view_ws/src/iai_kinect2/kinect2_viewer/data/test_pcd.pcd",cloud)==-1)
     {
       ROS_INFO("read file failed !");
     }

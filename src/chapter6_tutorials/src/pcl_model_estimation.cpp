@@ -32,8 +32,7 @@ public:
         std::vector<int> inliers;
 
         // created RandomSampleConsensus object and compute the appropriated model
-        pcl::SampleConsensusModelPlane<pcl::PointXYZ>::Ptr
-        model_p(new pcl::SampleConsensusModelPlane<pcl::PointXYZ>(cloud.makeShared()));     //指针
+        pcl::SampleConsensusModelPlane<pcl::PointXYZ>::Ptr model_p (new pcl::SampleConsensusModelPlane<pcl::PointXYZ>(cloud.makeShared()));     //指针
 
         pcl::RandomSampleConsensus<pcl::PointXYZ> ransac(model_p);
         ransac.setDistanceThreshold(.01);

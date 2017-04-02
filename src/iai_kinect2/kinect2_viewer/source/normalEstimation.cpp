@@ -15,7 +15,7 @@ class NormalHandler
 public:
   NormalHandler():viewer("Normals")    //构造函数
   {
-    pcl_sub = nh.subscribe("cloud_out_topic", 1, &NormalHandler::NormalCB, this);
+    pcl_sub = nh.subscribe("/cloud_out_topic", 1, &NormalHandler::NormalCB, this);
 
     view_timer = nh.createTimer(ros::Duration(0.1), &NormalHandler::timeCB,this);
     //设置viewer默认参数

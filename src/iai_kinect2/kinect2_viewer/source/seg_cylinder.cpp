@@ -38,10 +38,9 @@ public:
     pass.setFilterFieldName("z");
     pass.setFilterLimits(0 , 1.5);
     pass.filter(*cloud_filtered);
-    ROS_INFO("PassThrough Size:[%ld]",cloud_filtered->size());
+    ROS_INFO("PassThrough Size:[%ld]",cloud_filtered->points.size());
 
     //Estimate point Normals
-    // 速度真他妈的慢啊。
     pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> ne;
     pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>());
     pcl::PointCloud<pcl::Normal>::Ptr cloud_normal (new pcl::PointCloud<pcl::Normal>);
@@ -58,13 +57,14 @@ public:
 
     seg.setOptimizeCoefficients(true);
     seg.setModelType(pcl::SACMODEL_NORMAL_PLANE);
-    seg.setMethodType(pcl::SAC_RANSAC);
     seg.setNormalDistanceWeight(0.1);
+    seg.setMethodType(pcl::SAC_RANSAC);
     seg.setMaxIterations(100);
     seg.setDistanceThreshold(0.03);
     seg.setInputCloud(cloud_filtered);
     seg.setInputNormals(cloud_normal);
     seg.segment(*inliers_plane, *cofficients_plane);
+    std::cerr << "Plane coefficients: " << *cofficients_plane << std::endl;
     ROS_INFO( "Plane coefficients: [%ld]",*cofficients_plane);
 
     pcl::ExtractIndices<pcl::PointXYZ> extract; //点云提取
@@ -85,9 +85,9 @@ public:
     extract.filter(*cloud_no_plane);
     ROS_INFO("I get pointcloud: cloud_no_plane ");
 
+    extract_normals.setNegative(true);
     extract_normals.setInputCloud(cloud_normal);
     extract_normals.setIndices(inliers_plane);
-    extract_normals.setNegative(true);
     extract_normals.filter(*cloud_no_plane_normals);
     ROS_INFO("I get Normals: cloud_no_plane_normals ");
 
@@ -99,14 +99,14 @@ public:
     seg.setModelType(pcl::SACMODEL_CYLINDER);
     seg.setMethodType(pcl::SAC_RANSAC);
     seg.setNormalDistanceWeight(0.1);
-    seg.setMaxIterations(1000);//迭代１００００次，那么高！
-    seg.setDistanceThreshold(0.03);
+    seg.setMaxIterations(1000);//迭代10000次，那么高！
+    seg.setDistanceThreshold(0.05);
     seg.setRadiusLimits(0,0.1);
     seg.setInputCloud(cloud_no_plane);
     seg.setInputNormals(cloud_no_plane_normals);
      ROS_INFO("the cylinder, setInputCloud and setInputCloud ");
 
-    seg.segment(*inliers_plane,*cofficients_cylinder);
+    seg.segment(*inliers_cylinder,*cofficients_cylinder);
     ROS_INFO("I get cofficients_cylinder:[%ld] ", *cofficients_cylinder);
 
     // extract cylinders

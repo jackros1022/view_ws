@@ -15,7 +15,7 @@
     - [4.ros::spin();  //频率多少？](#4rosspin--频率多少)
 
 <!-- /TOC -->
-———————————————————————————————————————————————————————————————————————————
+
 # kinect_viewer.cpp
 ## 1.node不能关闭  
 1. 点云显示后，直接关闭窗口node被shutdown（）关闭
@@ -26,16 +26,16 @@
 3. 定义成类的成员，无法编译，报错 `error: expected identifier before numeric constant`
 ## 3.viewer.spinOnce();  //这一句干嘛？ 
 ## 4.变量使用指针类型是不是应该更快一点呢？ 
-——————————————————————————————————————————————————————————————————————————
+
 # normalEstimation.cpp
 ## 1.求法线，只能显示第一帧 
 1. 订阅 kinect_viewer 显示第一帧
 2. 直接订阅/kinect2/sd/points也只是显示第一帧，及时处理慢也应该有一点点的变化啊
 ## 2.使用isOrgnaized()函数判断点云 
-——————————————————————————————————————————————————————————————————————————
+
 # segmentation_cloud.cpp
 ## 1.指针为什么不能定义到类中，而只能放到回调函数中？ 
-- pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_input (new pcl::PointCloud<pcl::PointXYZ> );
+- pcl::PointCloud< pcl::PointXYZ >::Ptr cloud_input (new pcl::PointCloud< pcl::PointXYZ > );
 ## 2.指针ModelCoefficients类型的区别？
 - pcl::ModelCoefficientsPtr
 - pcl::ModelCoefficients::Ptr 这两个指针的区别
@@ -47,4 +47,4 @@
 - subscriber()函数每接收一个消息，就去调用一次回调函数。
 - /todo 设置Kinect2发送频率和订阅函数的消息队列的数据
 
-——————————————————————————————————————————————————————————————————————————
+

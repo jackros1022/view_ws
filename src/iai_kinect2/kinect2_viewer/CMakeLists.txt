@@ -12,6 +12,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Warray-bounds -Wtype-limits -Wreturn-ty
 INCLUDE(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
 CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
+
 IF(COMPILER_SUPPORTS_CXX11)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 ELSEIF(COMPILER_SUPPORTS_CXX0X)
@@ -20,7 +21,14 @@ ELSE()
   MESSAGE(ERROR "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 ENDIF()
 
-find_package(catkin REQUIRED COMPONENTS roscpp rostime std_msgs sensor_msgs message_filters cv_bridge image_transport compressed_image_transport compressed_depth_image_transport kinect2_bridge)
+find_package(catkin REQUIRED COMPONENTS roscpp rostime std_msgs sensor_msgs
+    message_filters
+    cv_bridge
+    image_transport
+    compressed_image_transport
+    compressed_depth_image_transport
+    kinect2_bridge
+    )
 
 ## System dependencies are found with CMake's conventions
 find_package(OpenCV REQUIRED)
@@ -92,25 +100,31 @@ target_link_libraries(kinect2_viewer
 #    add_executable(image_converter src/image_converter.cpp)
 #    target_link_libraries(image_converter ${catkin_LIBRARIES}  ${OpenCV_LIBRARIES})
 
-#/*-------------2017-03-22----SOURCE----------
+# -----------------SOURCE-----------------
+# --read
     add_executable(cloud_read source/cloud_read.cpp)
     target_link_libraries(cloud_read ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
-    add_executable(kinect_viewer source/kinect_viewer.cpp)
-    target_link_libraries(kinect_viewer ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+# --viewer
+    add_executable(view_Normal source/view_Normal.cpp)
+    target_link_libraries(view_Normal ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
-    add_executable(normalEstimation source/normalEstimation.cpp)
-    target_link_libraries(normalEstimation ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+    add_executable(viewer_process source/viewer_process.cpp)
+    target_link_libraries(viewer_process ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
-    add_executable(kinect_view_Normal source/kinect_view_Normal.cpp)
-    target_link_libraries(kinect_view_Normal ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+# --segment
+    add_executable(seg_euclidean_cluster source/seg_euclidean_cluster.cpp)
+    target_link_libraries(seg_euclidean_cluster ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
-    add_executable(segmentation_cloud source/segmentation_cloud.cpp)
-    target_link_libraries(segmentation_cloud ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+    add_executable(seg_cylinder source/seg_cylinder.cpp)
+    target_link_libraries(seg_cylinder ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
+    add_executable(seg_cylinder_no_class source/seg_cylinder_no_class.cpp)
+    target_link_libraries(seg_cylinder_no_class ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
-    add_executable(cylinder_segmentation source/cylinder_segmentation.cpp)
-    target_link_libraries(cylinder_segmentation ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+# --feature
+    add_executable(fealture_normalEstimation source/fealture_normalEstimation.cpp)
+    target_link_libraries(fealture_normalEstimation ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
 #############
 ## Install ##

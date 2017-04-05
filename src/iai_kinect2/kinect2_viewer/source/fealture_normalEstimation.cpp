@@ -30,14 +30,14 @@ public:
     pcl::fromROSMsg(*cloud_input, cloud);
     pcl::PointCloud<pcl::Normal> normal;
 
-       //normalEstimaton  ==>too slow
-//    pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> normalEstimaton;
-//    normalEstimaton.setInputCloud(cloud.makeShared());
-//    normalEstimaton.setRadiusSearch(0.03);
-//    pcl::search::KdTree<pcl::PointXYZ>::Ptr kdtree (new pcl::search::KdTree<pcl::PointXYZ>);
-//    normalEstimaton.setSearchMethod(kdtree);
+       //normalEstimaton  ==>too slow     
+  //  pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> normalEstimaton;
+  //  normalEstimaton.setInputCloud(cloud.makeShared());
+  //  normalEstimaton.setRadiusSearch(0.03);
+  //  pcl::search::KdTree<pcl::PointXYZ>::Ptr kdtree (new pcl::search::KdTree<pcl::PointXYZ>);
+  //  normalEstimaton.setSearchMethod(kdtree);
 
-//    normalEstimaton.compute(normal);
+  //  normalEstimaton.compute(normal);
 
       //IntegralImage  ==> efficient
     pcl::IntegralImageNormalEstimation<pcl::PointXYZ, pcl::Normal> normalEstimations;

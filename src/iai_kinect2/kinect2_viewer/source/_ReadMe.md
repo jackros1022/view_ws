@@ -1,5 +1,6 @@
 <!-- TOC -->
 
+- [Tips](#tips)
 - [kinect_viewer.cpp](#kinect_viewercpp)
     - [1.node不能关闭](#1node不能关闭)
     - [2.ros::Rate rate_loop(0.1);  //定义出错](#2rosrate-rate_loop01--定义出错)
@@ -15,6 +16,9 @@
     - [4.ros::spin();  //频率多少？](#4rosspin--频率多少)
 
 <!-- /TOC -->
+# Tips
+-　处理点云多个步骤，分开写多个node
+- 
 
 # kinect_viewer.cpp
 ## 1.node不能关闭  

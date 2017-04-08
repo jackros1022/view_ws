@@ -1,5 +1,4 @@
 #include <ros/ros.h>
-//三剑客
 #include <pcl/filters/passthrough.h>
 #include <pcl/filters/statistical_outlier_removal.h>
 #include <pcl/filters/voxel_grid.h>

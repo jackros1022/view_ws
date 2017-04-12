@@ -23,10 +23,12 @@ include_directories(include
 
 ## Add link directories
 link_directories(
+#    /usr/lib/x86_64-linux-gnu
   ${PCL_LIBRARY_DIRS}
 )
 
-
+message(status "____________PCL_LIBRARY_DIRS:"${PCL_LIBRARY_DIRS})
+message(status "____________ PCL_LIBRARIES:"${PCL_LIBRARIES})
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -118,9 +120,9 @@ include_directories(
 
 ## Declare a cpp executable
 
-        add_executable(pcl_create src/pcl_create.cpp)
-        #add_executable(pcl_downsampling src/pcl_downsampling.cpp)
-        #add_executable(pcl_filter src/pcl_filter.cpp)
+#        add_executable(pcl_create src/pcl_create.cpp)
+#        add_executable(pcl_downsampling src/pcl_downsampling.cpp)
+        add_executable(pcl_filter src/pcl_filter.cpp)
         #add_executable(pcl_matching src/pcl_matching.cpp)
         #add_executable(pcl_model_estimation src/pcl_model_estimation.cpp)
         #add_executable(pcl_partitioning src/pcl_partitioning.cpp)
@@ -134,9 +136,9 @@ include_directories(
 # add_dependencies(retrorov_model_bathymetric_node retrorov_model_bathymetric_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-        target_link_libraries(pcl_create ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-        #target_link_libraries(pcl_downsampling ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-        #target_link_libraries(pcl_filter ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#        target_link_libraries(pcl_create ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#        target_link_libraries(pcl_downsampling ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+        target_link_libraries(pcl_filter ${catkin_LIBRARIES} ${PCL_LIBRARIES})
         #target_link_libraries(pcl_matching ${catkin_LIBRARIES} ${PCL_LIBRARIES})
         #target_link_libraries(pcl_model_estimation ${catkin_LIBRARIES} ${PCL_LIBRARIES})
         #target_link_libraries(pcl_partitioning ${catkin_LIBRARIES} ${PCL_LIBRARIES})

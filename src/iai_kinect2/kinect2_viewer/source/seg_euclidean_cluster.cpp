@@ -129,6 +129,7 @@ private:
   ros::Subscriber pcl_sub;
   ros::Publisher pcl_pub;
 };
+
 int main(int argc, char **argv)
 {
   // Set up ROS.

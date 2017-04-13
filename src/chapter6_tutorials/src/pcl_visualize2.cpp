@@ -55,7 +55,7 @@ protected:
     ros::NodeHandle nh;   
     ros::Subscriber output_sub, downsampled_sub;    
     pcl::visualization::PCLVisualizer viewer;
-    int output_view, downsampled_view;    //窗口视图编号
+    int output_view, downsampled_view;                //窗口视图编号
     ros::Timer viewer_timer;                          //定时器
 };
 

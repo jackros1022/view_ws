@@ -4,5 +4,7 @@
         "functional": "cpp",
         "tuple": "cpp",
         "utility": "cpp"
-    }
+    },
+    "files.autoSave": "onFocusChange"
+
 }

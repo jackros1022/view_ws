@@ -18,6 +18,7 @@ int main(int argc, char **argv)
     if(pcl::io::loadPCDFile("/home/jack/ros/view_ws/src/iai_kinect2/kinect2_viewer/data/table_scene_mug_stereo_textured.pcd",cloud)==-1)
       {
         ROS_INFO("read file failed !");
+
       }
 
     pcl::toROSMsg(cloud, output);
@@ -29,8 +30,9 @@ int main(int argc, char **argv)
     while (ros::ok())
     {
         pcl_pub.publish(output);
+        ROS_INFO(" publish topic: /read_pcl_out!");
         ros::spinOnce();
-        loop_rate.sleep();  //1Hz
+        loop_rate.sleep();  //10Hz
     }
 
     return 0;

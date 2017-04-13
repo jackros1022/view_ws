@@ -27,8 +27,8 @@ link_directories(
   ${PCL_LIBRARY_DIRS}
 )
 
-message(status "____________PCL_LIBRARY_DIRS:"${PCL_LIBRARY_DIRS})
-message(status "____________ PCL_LIBRARIES:"${PCL_LIBRARIES})
+#message(status "____________PCL_LIBRARY_DIRS:"${PCL_LIBRARY_DIRS})
+#message(status "____________ PCL_LIBRARIES:"${PCL_LIBRARIES})
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -122,14 +122,14 @@ include_directories(
 
 #        add_executable(pcl_create src/pcl_create.cpp)
 #        add_executable(pcl_downsampling src/pcl_downsampling.cpp)
-        add_executable(pcl_filter src/pcl_filter.cpp)
-        #add_executable(pcl_matching src/pcl_matching.cpp)
-        #add_executable(pcl_model_estimation src/pcl_model_estimation.cpp)
-        #add_executable(pcl_partitioning src/pcl_partitioning.cpp)
-        #add_executable(pcl_planar_segmentation src/pcl_planar_segmentation.cpp)
-        #add_executable(pcl_read src/pcl_read.cpp)
-        #add_executable(pcl_visualize2 src/pcl_visualize2.cpp)
-        #add_executable(pcl_write src/pcl_write.cpp)
+#        add_executable(pcl_filter src/pcl_filter.cpp)
+#        add_executable(pcl_matching src/pcl_matching.cpp)
+#        add_executable(pcl_model_estimation src/pcl_model_estimation.cpp)
+#        add_executable(pcl_partitioning src/pcl_partitioning.cpp)
+#        add_executable(pcl_planar_segmentation src/pcl_planar_segmentation.cpp)
+#        add_executable(pcl_read src/pcl_read.cpp)
+#        add_executable(pcl_visualize2 src/pcl_visualize2.cpp)
+#        add_executable(pcl_write src/pcl_write.cpp)
  
  ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
@@ -138,14 +138,14 @@ include_directories(
 ## Specify libraries to link a library or executable target against
 #        target_link_libraries(pcl_create ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 #        target_link_libraries(pcl_downsampling ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-        target_link_libraries(pcl_filter ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-        #target_link_libraries(pcl_matching ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-        #target_link_libraries(pcl_model_estimation ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-        #target_link_libraries(pcl_partitioning ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-        #target_link_libraries(pcl_planar_segmentation ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-        #target_link_libraries(pcl_read ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-        #target_link_libraries(pcl_visualize2 ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-        #target_link_libraries(pcl_write ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#        target_link_libraries(pcl_filter ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#        target_link_libraries(pcl_matching ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#        target_link_libraries(pcl_model_estimation ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#        target_link_libraries(pcl_partitioning ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#        target_link_libraries(pcl_planar_segmentation ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#        target_link_libraries(pcl_read ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#        target_link_libraries(pcl_visualize2 ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#        target_link_libraries(pcl_write ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 #############
 ## Install ##
 #############

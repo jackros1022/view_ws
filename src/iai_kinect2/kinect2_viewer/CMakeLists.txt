@@ -78,6 +78,7 @@ include_directories(include
   ${kinect2_bridge_INCLUDE_DIRS}
 )
 
+# -----------------SRC_VIEWER-----------------
 add_executable(kinect2_viewer src/viewer.cpp)
 target_link_libraries(kinect2_viewer
   ${catkin_LIBRARIES}
@@ -85,9 +86,7 @@ target_link_libraries(kinect2_viewer
   ${PCL_LIBRARIES}
   ${kinect2_bridge_LIBRARIES}
 )
-
-
-#/*-------------2016-12-24----SRC----------
+# -----------------SRC-----------------
 #    add_executable(pcl_cloud_viewer src/pcl_cloud_viewer.cpp)
 #    target_link_libraries(pcl_cloud_viewer ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
@@ -101,30 +100,46 @@ target_link_libraries(kinect2_viewer
 #    target_link_libraries(image_converter ${catkin_LIBRARIES}  ${OpenCV_LIBRARIES})
 
 # -----------------SOURCE-----------------
-# --read
+## --read
     add_executable(cloud_read source/cloud_read.cpp)
     target_link_libraries(cloud_read ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
-# --viewer
-    add_executable(view_Normal source/view_Normal.cpp)
-    target_link_libraries(view_Normal ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+## --viewer
+#    add_executable(view_Normal source/view_Normal.cpp)
+#    target_link_libraries(view_Normal ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
     add_executable(viewer_process source/viewer_process.cpp)
     target_link_libraries(viewer_process ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
-# --segment
-    add_executable(seg_euclidean_cluster source/seg_euclidean_cluster.cpp)
-    target_link_libraries(seg_euclidean_cluster ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+## --segment
+#    add_executable(seg_euclidean_cluster source/seg_euclidean_cluster.cpp)
+#    target_link_libraries(seg_euclidean_cluster ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
-    add_executable(seg_cylinder source/seg_cylinder.cpp)
-    target_link_libraries(seg_cylinder ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+#    add_executable(seg_cylinder source/seg_cylinder.cpp)
+#    target_link_libraries(seg_cylinder ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
-    add_executable(seg_cylinder_no_class source/seg_cylinder_no_class.cpp)
-    target_link_libraries(seg_cylinder_no_class ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+#    add_executable(seg_cylinder_no_class source/seg_cylinder_no_class.cpp)
+#    target_link_libraries(seg_cylinder_no_class ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
-# --feature
-    add_executable(fealture_normalEstimation source/fealture_normalEstimation.cpp)
-    target_link_libraries(fealture_normalEstimation ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+## --feature
+#    add_executable(fealture_normalEstimation source/fealture_normalEstimation.cpp)
+#    target_link_libraries(fealture_normalEstimation ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+
+# -----------------6DOF-----------------
+# --filter
+    add_executable(filter_cloud_6dof 6DOF/filter_cloud_6dof.cpp)
+    target_link_libraries(filter_cloud_6dof ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+
+
+    add_executable(seg_cylinder_6dof 6DOF/seg_cylinder_6dof.cpp)
+    target_link_libraries(seg_cylinder_6dof ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+
+
+    add_executable(viewer_6dof 6DOF/viewer_6dof.cpp)
+    target_link_libraries(viewer_6dof ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
+
+    add_executable(viewer_6dof2 6DOF/viewer_6dof2.cpp)
+    target_link_libraries(viewer_6dof2 ${catkin_LIBRARIES}  ${PCL_LIBRARIES})
 
 #############
 ## Install ##

@@ -59,7 +59,8 @@ public:
     std::cerr << "Plane coefficients: " << *cofficients_plane << std::endl;
     ROS_INFO( "Plane coefficients");
 
-    pcl::ExtractIndices<pcl::PointXYZ> extract; //点云提取
+    // 利用分割已经求取的inliers，提取平面
+    pcl::ExtractIndices<pcl::PointXYZ> extract; 
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_plane(new pcl::PointCloud<pcl::PointXYZ>);
     extract.setInputCloud(cloud_input);
     extract.setIndices(inliers_plane);
@@ -70,6 +71,7 @@ public:
     writer.write("cloud_plane.pcd",*cloud_plane);
     ROS_INFO("I save file:cloud_plane.pcd ");
 
+    // 提取平面以外的物体和法线
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_no_plane(new pcl::PointCloud<pcl::PointXYZ>);   //保存除平面以外的点云
     pcl::PointCloud<pcl::Normal>::Ptr cloud_no_plane_normals (new pcl::PointCloud<pcl::Normal>);  //保存除平面以外的点云的法线
     pcl::ExtractIndices<pcl::Normal> extract_normals;   //法线提取
@@ -88,10 +90,10 @@ public:
     pcl::ModelCoefficients::Ptr cofficients_cylinder(new pcl::ModelCoefficients);
 
     seg.setOptimizeCoefficients(true);
-    seg.setModelType(pcl::SACMODEL_CYLINDER);
+    seg.setModelType(pcl::SACMODEL_CYLINDER);   //只是提取圆柱
     seg.setMethodType(pcl::SAC_RANSAC);
     seg.setNormalDistanceWeight(0.1);
-    seg.setMaxIterations(1000);//迭代10000次，那么高！
+    seg.setMaxIterations(1000);                 //迭代10000次，那么高！
     seg.setDistanceThreshold(0.05);
     seg.setRadiusLimits(0,0.1);
     seg.setInputCloud(cloud_no_plane);

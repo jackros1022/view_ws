@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.2.1, 2017-04-13T12:54:36. -->
+<!-- Written by QtCreator 4.2.1, 2017-04-20T21:49:37. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -103,9 +103,9 @@
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
      <value type="QString">CMAKE_PREFIX_PATH=/home/jack/ros/view_ws/devel:/opt/ros/kinetic</value>
-     <value type="QString">LD_LIBRARY_PATH=/home/jack/ros/view_ws/devel/lib:/opt/ros/kinetic/lib:/opt/qt57/lib/x86_64-linux-gnu:/opt/qt57/lib</value>
+     <value type="QString">LD_LIBRARY_PATH=/home/jack/ros/view_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/opt/qt57/lib/x86_64-linux-gnu:/opt/qt57/lib</value>
      <value type="QString">PATH=/opt/ros/kinetic/bin:/opt/qt57/bin:/home/jack/bin:/home/jack/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin</value>
-     <value type="QString">PKG_CONFIG_PATH=/home/jack/ros/view_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/qt57/lib/pkgconfig</value>
+     <value type="QString">PKG_CONFIG_PATH=/home/jack/ros/view_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig:/opt/qt57/lib/pkgconfig</value>
      <value type="QString">PWD=/home/jack/ros/view_ws</value>
      <value type="QString">PYTHONPATH=/opt/ros/kinetic/lib/python2.7/dist-packages</value>
      <value type="QString">QTDIR=/opt/qt57</value>

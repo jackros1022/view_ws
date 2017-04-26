@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.2.1, 2017-04-20T21:49:37. -->
+<!-- Written by QtCreator 4.2.1, 2017-04-26T13:12:28. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{c548cddb-5d10-4491-a2ac-3f09f6deb212}</value>
+  <value type="QByteArray">{214ad10c-23d8-4e81-8669-a8520faf183b}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -61,7 +61,7 @@
   <valuemap type="QVariantMap">
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{9cf6448f-8fde-4c7e-a145-5c33fd7f90cf}</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{6d514ce0-17d2-4645-8f40-e254eb03485d}</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
@@ -103,12 +103,11 @@
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
      <value type="QString">CMAKE_PREFIX_PATH=/home/jack/ros/view_ws/devel:/opt/ros/kinetic</value>
-     <value type="QString">LD_LIBRARY_PATH=/home/jack/ros/view_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/opt/qt57/lib/x86_64-linux-gnu:/opt/qt57/lib</value>
-     <value type="QString">PATH=/opt/ros/kinetic/bin:/opt/qt57/bin:/home/jack/bin:/home/jack/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin</value>
-     <value type="QString">PKG_CONFIG_PATH=/home/jack/ros/view_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig:/opt/qt57/lib/pkgconfig</value>
+     <value type="QString">LD_LIBRARY_PATH=/home/jack/ros/view_ws/devel/lib:/opt/ros/kinetic/lib:/opt/qt57/lib/x86_64-linux-gnu:/opt/qt57/lib</value>
+     <value type="QString">PATH=/opt/ros/kinetic/bin:/opt/qt57/bin:/home/jack/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin</value>
+     <value type="QString">PKG_CONFIG_PATH=/home/jack/ros/view_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/qt57/lib/pkgconfig</value>
      <value type="QString">PWD=/home/jack/ros/view_ws</value>
      <value type="QString">PYTHONPATH=/opt/ros/kinetic/lib/python2.7/dist-packages</value>
-     <value type="QString">QTDIR=/opt/qt57</value>
      <value type="QString">ROSLISP_PACKAGE_DIRECTORIES=/home/jack/ros/view_ws/devel/share/common-lisp</value>
      <value type="QString">ROS_DISTRO=kinetic</value>
      <value type="QString">ROS_ETC_DIR=/opt/ros/kinetic/etc/ros</value>
@@ -316,57 +315,7 @@
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Run</value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSRunConfiguration.RunStepList</value>
-     <valuemap type="QVariantMap" key="ProjectExplorer.RunStepList.Step.0">
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName"></value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSRunStep</value>
-      <value type="bool" key="ProjectExplorer.RunStep.Enabled">false</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Arguments"></value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Command">rosrun</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Package">kinect2_viewer</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Target">cloud_read</value>
-     </valuemap>
-     <valuemap type="QVariantMap" key="ProjectExplorer.RunStepList.Step.1">
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName"></value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSLaunchStep</value>
-      <value type="bool" key="ProjectExplorer.RunStep.Enabled">true</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Arguments"></value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Command">roslaunch</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Package">kinect2_bridge</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Target">kinect2_bridge.launch</value>
-     </valuemap>
-     <valuemap type="QVariantMap" key="ProjectExplorer.RunStepList.Step.2">
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName"></value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSRunStep</value>
-      <value type="bool" key="ProjectExplorer.RunStep.Enabled">true</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Arguments"></value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Command">rosrun</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Package">kinect2_viewer</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Target">filter_cloud_6dof</value>
-     </valuemap>
-     <valuemap type="QVariantMap" key="ProjectExplorer.RunStepList.Step.3">
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName"></value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSRunStep</value>
-      <value type="bool" key="ProjectExplorer.RunStep.Enabled">true</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Arguments"></value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Command">rosrun</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Package">kinect2_viewer</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Target">seg_cylinder_6dof</value>
-     </valuemap>
-     <valuemap type="QVariantMap" key="ProjectExplorer.RunStepList.Step.4">
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName"></value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ROSProjectManager.ROSRunStep</value>
-      <value type="bool" key="ProjectExplorer.RunStep.Enabled">true</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Arguments"></value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Command">rosrun</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Package">kinect2_viewer</value>
-      <value type="QString" key="ROSProjectManager.ROSGenericStep.Target">viewer_6dof</value>
-     </valuemap>
-     <value type="int" key="ProjectExplorer.RunStepList.StepsCount">5</value>
+     <value type="int" key="ProjectExplorer.RunStepList.StepsCount">0</value>
     </valuemap>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
